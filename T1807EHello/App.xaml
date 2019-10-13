@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="T1807EHello.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1807EHello"
+    RequestedTheme="Light">
+    <!--<Page.Background>
+        <ImageBrush ImageSource="ms-appx:///Assets/background.jpg" Stretch="UniformToFill"/>
+    </Page.Background>-->
+
+</Application>

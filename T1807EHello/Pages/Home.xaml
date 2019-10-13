@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="T1807EHello.Pages.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1807EHello.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="LoginFail" >
+
+            <Image Margin="0 0 0 100" Width="300" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center" Source="ms-appx:///Assets/Logo.png"/>
+            <StackPanel Margin="0 300 0 0 " VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <TextBlock Foreground="Indigo" Margin="10" Name="LoginSuccessText" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Center" Visibility="{x:Bind LoginSuccessStatus}" />
+                <TextBlock Foreground="Indigo" Margin="10" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Center" Visibility="{x:Bind LoginFailStatus}">
+                    Please
+                    <Hyperlink Foreground="DarkSlateBlue" UnderlineStyle="None" Click="HyperlinkButton_Click_Login">Login</Hyperlink>
+                    or
+                    <Hyperlink Foreground="DarkSlateBlue" UnderlineStyle="None" Click="HyperlinkButton_Click_Register">Register</Hyperlink>
+                    to continue
+                </TextBlock>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
