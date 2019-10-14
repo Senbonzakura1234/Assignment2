@@ -44,8 +44,7 @@ namespace T1807EHello.Pages
             ("upload", typeof(upload)),
             ("mySong", typeof(mySong)),
             ("profile", typeof(Profile)),
-            ("edit", typeof(edit)),
-            ("file", typeof(FileHandle))
+            ("edit", typeof(edit))
         };
 
         public static void Refresh()
@@ -140,7 +139,8 @@ namespace T1807EHello.Pages
                     MySong.IsEnabled = true;
                     Profile.IsEnabled = true;
                     Edit.IsEnabled = true;
-                    File.IsEnabled = true;
+                    Logout.IsEnabled = true;
+             
                 }
                 else
                 {
@@ -152,7 +152,7 @@ namespace T1807EHello.Pages
                     MySong.IsEnabled = false;
                     Profile.IsEnabled = false;
                     Edit.IsEnabled = false;
-                    File.IsEnabled = false;
+                    Logout.IsEnabled = false;
                 }
             }
             else
@@ -165,7 +165,7 @@ namespace T1807EHello.Pages
                 MySong.IsEnabled = false;
                 Profile.IsEnabled = false;
                 Edit.IsEnabled = false;
-                File.IsEnabled = false;
+                Logout.IsEnabled = false;
             }
             
         }
@@ -198,6 +198,11 @@ namespace T1807EHello.Pages
                         page = item.Page;
                     }
                     
+                }
+                else if(navItemTag == "logout")
+                {
+                    _service.Logout();
+                    page = typeof(Home);
                 }
                 else
                 {

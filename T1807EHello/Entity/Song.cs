@@ -15,5 +15,6 @@ namespace T1807EHello.Entity
         public string author { get; set; }
         public string thumbnail { get; set; }
         public string link { get; set; }
+        public string memberId { get; set; }
     }
 }

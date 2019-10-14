@@ -31,15 +31,20 @@
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC92;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Name="Login" Tag="login" Icon="People" Content="Login"/>
-                <NavigationViewItem Name="Register" Tag="register" Icon="Add" Content="Register"/>
+
                 <NavigationViewItem Name="Profile" Tag="profile" Content="User Profile">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE946;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
                 <NavigationViewItem Name="Edit" Tag="edit" Icon="Edit" Content="Edit Profile"/>
-                <NavigationViewItem Name="File" Tag="file" Icon="Addfriend" Content="File Manager"/>
+                <NavigationViewItem Name="Login" Tag="login" Icon="People" Content="Login"/>
+                <NavigationViewItem Name="Register" Tag="register" Icon="Add" Content="Register"/>
+                <NavigationViewItem Name="Logout" Tag="logout"  Content="Logout">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE760;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using Windows.Storage;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -25,7 +26,7 @@ namespace T1807EHello.Entity
                 };
                 if (!ValidateLogin(memberLogin))
                 {
-                    throw new Exception("Login fails!");
+                    DialogService.ShowToast(string.Empty, "Login Fail");
                 }
                 var token = GetTokenFromApi(memberLogin);
                 CreateTokenFile(token);
@@ -37,6 +38,11 @@ namespace T1807EHello.Entity
                 return null;
             }
             
+        }
+
+        public void Logout()
+        {
+            CreateTokenFile(" ");
         }
 
         public Member LoginWithToken()
@@ -113,7 +119,9 @@ namespace T1807EHello.Entity
 
         private bool ValidateLogin(MemberLogin memberLogin)
         {
-            return true;
+            return !string.IsNullOrWhiteSpace(memberLogin.password) &&
+                   !string.IsNullOrWhiteSpace(memberLogin.email) &&
+                   Regex.IsMatch(memberLogin.email, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
         }
     }
 }

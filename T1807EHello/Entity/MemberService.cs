@@ -10,6 +10,7 @@ namespace T1807EHello.Entity
     internal interface IMemberService
     {
         string Login(string email, string password);
+        void Logout();
 
         Member LoginWithToken();
 

@@ -46,17 +46,22 @@
 
         </GridView>
         <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
-            <MediaElement Name="MyMediaPlayer"  Stretch="Fill" >
+            <MediaElement AreTransportControlsEnabled="True"  Name="MyMediaPlayer" Height="60" Stretch="Fill">
+                <MediaElement.TransportControls>
+                    <MediaTransportControls  IsCompact="True"
+                        IsSeekBarVisible="True" 
+                        IsVolumeButtonVisible="True" IsFullWindowButtonVisible="False" IsPlaybackRateButtonVisible="False"
+                        IsZoomButtonVisible="False" />
+                </MediaElement.TransportControls>
             </MediaElement>
-            <Slider Name="TimelineSlider"  Minimum="0"  IsThumbToolTipEnabled="True" HorizontalAlignment="Stretch" 
-                    VerticalAlignment="Center" Margin="5,0,0,6"  FontSize="12" Height="50"/>
 
+            
             <CommandBar IsOpen="True" Background="Transparent" >
-                <AppBarButton x:Name="Backward" Icon="Back" Label="Backward"  Click="Backward_OnClick"/>
-                <AppBarButton x:Name="Forward" Icon="Forward" Label="Forward" Click="Forward_OnClick"/>
-                <AppBarSeparator/>
+                <AppBarButton x:Name="Backward" Icon="Back" Label="Backward"   Click="Backward_OnClick"/>
+                <AppBarButton x:Name="Forward" Icon="Forward" Label="Forward"  Click="Forward_OnClick"/>
+                <AppBarSeparator Visibility="Collapsed"/>
                 <AppBarButton x:Name="PreviousButton" Icon="Previous" Label="Previous" Click="PreviousButton_OnClick"/>
-                <AppBarButton x:Name="StatusButton" Icon="Play" Label="Play" Click="StatusButton_OnClick"/>
+                <AppBarButton x:Name="StatusButton" Icon="Play" Visibility="Collapsed" Label="Play" Click="StatusButton_OnClick"/>
                 <AppBarButton x:Name="NextButton" Icon="Next" Label="Next" Click="NextButton_OnClick"/>
                 <CommandBar.Content >
                     <TextBlock x:Name="ControlLabel" Text="Please choose a song." Margin="12, 11"/>

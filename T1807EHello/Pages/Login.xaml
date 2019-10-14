@@ -19,18 +19,18 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBox Header="Email" MinWidth="200" Margin="0 0 0 20" Grid.Row="0" Grid.Column="0" x:Name="Email"/>
+                <TextBox Header="Email" Width="300" Margin="0 0 0 20" Grid.Row="0" Grid.Column="0" x:Name="Email"/>
 
 
-                <PasswordBox Header="Password" MinWidth="200" Margin="0 0 0 20" Grid.Row="1" Grid.Column="0" x:Name="Password"/>
+                <PasswordBox Header="Password" Width="300" Margin="0 0 0 20" Grid.Row="1" Grid.Column="0" x:Name="Password"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button MinWidth="100" HorizontalAlignment="Center" Margin="0 0 10 0" Click="ResetForm" Grid.Row="0" Grid.Column="0" >Reset</Button>
-                <Button MinWidth="100" HorizontalAlignment="Center" Margin="10 0 0 0" Click="LoginTrigger" Grid.Row="0" Grid.Column="1" >Login</Button>
+                <Button HorizontalAlignment="Stretch" Margin="0 0 10 0" Click="ResetForm" Grid.Row="0" Grid.Column="0" >Reset</Button>
+                <Button HorizontalAlignment="Stretch" Margin="10 0 0 0" Click="LoginTrigger" Grid.Row="0" Grid.Column="1" >Login</Button>
             </Grid>
 
         </StackPanel>

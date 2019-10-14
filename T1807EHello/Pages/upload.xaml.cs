@@ -48,6 +48,12 @@ namespace T1807EHello.Pages
             {
                 var responseContent = songManager.Upload(song);
                 Debug.WriteLine(responseContent.name);
+                Name.Text = string.Empty;
+                Description.Text = string.Empty;
+                Singer.Text = string.Empty;
+                Author.Text = string.Empty;
+                Thumbnail.Text = string.Empty;
+                Link.Text = string.Empty;
             }
         }
 

@@ -21,7 +21,7 @@ namespace T1807EHello.Entity
         public string password { get; set; }
         public string token { get; set; }
         public string secrectToken { get; set; }
-        public long userId { get; set; }
+        public long id { get; set; }
         public long createdTimeMLS { get; set; }
         public long expiredTimeMLS { get; set; }
         public int status { get; set; }

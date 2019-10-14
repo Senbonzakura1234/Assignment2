@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.UI.Xaml.Data;
 using Newtonsoft.Json;
 
 namespace T1807EHello.Entity
@@ -54,11 +55,11 @@ namespace T1807EHello.Entity
 
         public ObservableCollection<Song> LoadSongs()
         {
-            ObservableCollection<Song> songs = new ObservableCollection<Song>();
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + ReadTokenFile());
             var responseContent = client.GetAsync(SongApi).Result.Content.ReadAsStringAsync().Result;
-            songs = JsonConvert.DeserializeObject<ObservableCollection<Song>>(responseContent);
+            var songs = JsonConvert.DeserializeObject<ObservableCollection<Song>>(responseContent);
+            
             return songs;
         }
 

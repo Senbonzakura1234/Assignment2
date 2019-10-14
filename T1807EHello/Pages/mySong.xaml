@@ -5,10 +5,70 @@
     xmlns:local="using:T1807EHello.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:T1807EHello.Entity"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <GridView x:Name="MyListSong"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="entity:Song">
+                    <StackPanel Padding="20" MinWidth="380" Margin="10" Tapped="SelectSong" Tag="{Binding}" HorizontalAlignment="Stretch">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="110"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <PersonPicture HorizontalAlignment="Stretch" Padding="0 0 30 0" 
+                                           Grid.Column="0" Width="80" Height="80" ProfilePicture="{x:Bind thumbnail}"/>
+                            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="10 0 0 0" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{x:Bind name}" VerticalAlignment="Center" Foreground="Indigo" FontSize="18" FontFamily="Cambria" FontWeight="Bold" HorizontalAlignment="Stretch" Grid.Row="0"/>
+                                <TextBlock Text="{x:Bind singer}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Row="1"/>
+                            </Grid>
+                        </Grid>
+
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+
+        </GridView>
+        <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
+            <MediaElement AreTransportControlsEnabled="True"  Name="MyMediaPlayer" Height="60" Stretch="Fill">
+                <MediaElement.TransportControls>
+                    <MediaTransportControls  IsCompact="True"
+                        IsSeekBarVisible="True" 
+                        IsVolumeButtonVisible="True" IsFullWindowButtonVisible="False" IsPlaybackRateButtonVisible="False"
+                        IsZoomButtonVisible="False" />
+                </MediaElement.TransportControls>
+            </MediaElement>
+
+
+            <CommandBar IsOpen="True" Background="Transparent" >
+                <AppBarButton x:Name="Backward" Icon="Back" Label="Backward"   Click="Backward_OnClick"/>
+                <AppBarButton x:Name="Forward" Icon="Forward" Label="Forward"  Click="Forward_OnClick"/>
+                <AppBarSeparator Visibility="Collapsed"/>
+                <AppBarButton x:Name="PreviousButton" Icon="Previous" Label="Previous" Click="PreviousButton_OnClick"/>
+                <AppBarButton x:Name="StatusButton" Icon="Play" Visibility="Collapsed" Label="Play" Click="StatusButton_OnClick"/>
+                <AppBarButton x:Name="NextButton" Icon="Next" Label="Next" Click="NextButton_OnClick"/>
+                <CommandBar.Content >
+                    <TextBlock x:Name="ControlLabel" Text="Please choose a song." Margin="12, 11"/>
+                </CommandBar.Content>
+            </CommandBar>
+
+        </StackPanel>
+
 
     </Grid>
 </Page>

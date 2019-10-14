@@ -31,15 +31,20 @@
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC92;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem x:ConnectionId='7' Name="Login" Tag="login" Icon="People" Content="Login"/>
-                <NavigationViewItem x:ConnectionId='8' Name="Register" Tag="register" Icon="Add" Content="Register"/>
-                <NavigationViewItem x:ConnectionId='9' Name="Profile" Tag="profile" Content="User Profile">
+
+                <NavigationViewItem x:ConnectionId='7' Name="Profile" Tag="profile" Content="User Profile">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE946;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem x:ConnectionId='10' Name="Edit" Tag="edit" Icon="Edit" Content="Edit Profile"/>
-                <NavigationViewItem x:ConnectionId='11' Name="File" Tag="file" Icon="Addfriend" Content="File Manager"/>
+                <NavigationViewItem x:ConnectionId='8' Name="Edit" Tag="edit" Icon="Edit" Content="Edit Profile"/>
+                <NavigationViewItem x:ConnectionId='9' Name="Login" Tag="login" Icon="People" Content="Login"/>
+                <NavigationViewItem x:ConnectionId='10' Name="Register" Tag="register" Icon="Add" Content="Register"/>
+                <NavigationViewItem x:ConnectionId='11' Name="Logout" Tag="logout"  Content="Logout">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE760;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>

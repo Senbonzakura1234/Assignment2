@@ -50,7 +50,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
-      <RootProperty Name="MinWidth" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
@@ -90,12 +89,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Header" />
-      <RootProperty Name="MinWidth" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Header" />
-      <RootProperty Name="MinWidth" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="T1807EHello.Pages.Login" />
@@ -130,7 +129,6 @@
       <RootEvent Name="NavigationFailed" />
     </RootType>
     <RootType FullName="T1807EHello.Pages.MasterLayout" />
-    <RootType FullName="T1807EHello.Pages.mySong" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -138,17 +136,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
       <RootProperty Name="Name" />
-      <RootProperty Name="Stretch" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Minimum" />
-      <RootProperty Name="IsThumbToolTipEnabled" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="FontSize" />
+      <RootProperty Name="AreTransportControlsEnabled" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="TransportControls" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="IsOpen" />
@@ -157,11 +148,22 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="Label" />
       <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator">
+      <RootProperty Name="Visibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
+      <RootProperty Name="IsCompact" />
+      <RootProperty Name="IsSeekBarVisible" />
+      <RootProperty Name="IsVolumeButtonVisible" />
+      <RootProperty Name="IsFullWindowButtonVisible" />
+      <RootProperty Name="IsPlaybackRateButtonVisible" />
+      <RootProperty Name="IsZoomButtonVisible" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -173,6 +175,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="ProfilePicture" />
     </RootType>
+    <RootType FullName="T1807EHello.Pages.mySong" />
     <RootType FullName="T1807EHello.Pages.NewSong" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Height" />

@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Media.Capture;
 using Windows.Storage;
@@ -28,6 +29,8 @@ namespace T1807EHello.Pages
         public Register()
         {
             InitializeComponent();
+            Birthday.MaxYear = DateTimeOffset.Parse("10-10-2010");
+            Birthday.MinYear = DateTimeOffset.Parse("10-10-1930");
         }
 
         private void RegisterTrigger(object sender, RoutedEventArgs e)
@@ -52,13 +55,15 @@ namespace T1807EHello.Pages
                 var rePass = RePassword.Password;
                 if (!string.IsNullOrWhiteSpace(member.password) && !string.IsNullOrWhiteSpace(member.email) &&
                     !string.IsNullOrWhiteSpace(member.firstName) && !string.IsNullOrWhiteSpace(member.lastName) &&
-                    !string.IsNullOrWhiteSpace(member.phone) && rePass == member.password)
+                    !string.IsNullOrWhiteSpace(member.phone) && rePass == member.password && 
+                    Regex.IsMatch(member.email, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
                 {
                     _service = new MemberServiceImp();
                     var responseMember = _service.Register(member);
                     if (responseMember != null)
                     {
                         Debug.WriteLine(responseMember.email);
+                        _service.Login(member.email, member.password);
                         Frame.Navigate(typeof(Home));
                     }
                     else

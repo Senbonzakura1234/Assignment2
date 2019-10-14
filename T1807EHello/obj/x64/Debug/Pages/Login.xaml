@@ -19,18 +19,18 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <TextBox x:ConnectionId='4' Header="Email" MinWidth="200" Margin="0 0 0 20" Grid.Row="0" Grid.Column="0" x:Name="Email"/>
+                <TextBox x:ConnectionId='4' Header="Email" Width="300" Margin="0 0 0 20" Grid.Row="0" Grid.Column="0" x:Name="Email"/>
 
 
-                <PasswordBox x:ConnectionId='5' Header="Password" MinWidth="200" Margin="0 0 0 20" Grid.Row="1" Grid.Column="0" x:Name="Password"/>
+                <PasswordBox x:ConnectionId='5' Header="Password" Width="300" Margin="0 0 0 20" Grid.Row="1" Grid.Column="0" x:Name="Password"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='2' MinWidth="100" HorizontalAlignment="Center" Margin="0 0 10 0"                   Grid.Row="0" Grid.Column="0" >Reset</Button>
-                <Button x:ConnectionId='3' MinWidth="100" HorizontalAlignment="Center" Margin="10 0 0 0"                      Grid.Row="0" Grid.Column="1" >Login</Button>
+                <Button x:ConnectionId='2' HorizontalAlignment="Stretch" Margin="0 0 10 0"                   Grid.Row="0" Grid.Column="0" >Reset</Button>
+                <Button x:ConnectionId='3' HorizontalAlignment="Stretch" Margin="10 0 0 0"                      Grid.Row="0" Grid.Column="1" >Login</Button>
             </Grid>
 
         </StackPanel>
