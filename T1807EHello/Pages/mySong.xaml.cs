@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
+using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -17,6 +18,8 @@ namespace T1807EHello.Pages
     public sealed partial class mySong : Page
     {
         private ObservableCollection<Song> ListSongs { get; set; }
+
+        
         //private IMemberService _service;
         //private string memberID;
         private readonly ISongManager _songManager;
@@ -34,7 +37,7 @@ namespace T1807EHello.Pages
         }
         private void LoadListSongs()
         {
-            ListSongs = _songManager.LoadSongs();
+            ListSongs = _songManager.LoadSongs(1);
             MyListSong.ItemsSource = ListSongs;
             _currentIndex = 0;
         }
@@ -108,7 +111,7 @@ namespace T1807EHello.Pages
             Play();
         }
 
-
+        
         //private void SeekToMediaPosition(object sender, RangeBaseValueChangedEventArgs rangeBaseValueChangedEventArgs)
         //{
         //    var sliderValue = (int)TimelineSlider.Value;
@@ -125,6 +128,19 @@ namespace T1807EHello.Pages
         {
             var ts = new TimeSpan(0, 0, 0, 5);
             MyMediaPlayer.Position += ts;
+        }
+
+
+        public void MyMediaPlayer_OnMediaEnded(object sender, RoutedEventArgs e)
+        {
+            _currentIndex++;
+            if (_currentIndex >= ListSongs.Count || _currentIndex < 0)
+            {
+                _currentIndex = 0;
+            }
+            MyMediaPlayer.Source = new Uri(ListSongs[_currentIndex].link);
+
+            Play();
         }
     }
 }

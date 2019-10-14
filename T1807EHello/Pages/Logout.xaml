@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="T1807EHello.Pages.FileHandle"
+    x:Class="T1807EHello.Pages.Logout"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:T1807EHello.Pages"
@@ -8,10 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid VerticalAlignment="Top">
-        <TextBlock x:ConnectionId='2' x:Name="AvatarUrl"></TextBlock>
-        <Image x:ConnectionId='3' x:Name="Avatar" Width="200" Height="200"></Image>
-        <Button x:ConnectionId='4'                         >Add Avatar</Button>
+    <Grid>
+        <Button Click="ReturnHome" Margin="10" Padding="10"  HorizontalAlignment="Left" VerticalAlignment="Top">Return Home</Button>
     </Grid>
 </Page>
-

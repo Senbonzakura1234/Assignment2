@@ -93,11 +93,6 @@ C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\setting.g.cs
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\setting.xaml
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\setting.xbf
-C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\FileHandle.g.i.cs
-C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\FileHandle.g.cs
-C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\FileHandle.xaml
-C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\FileHandle.xbf
-C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\FileHandle.xbf
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\UiComm.Client.Universal.dll
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\UiComm.Client.dll
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\UiComm.Core.Connector.dll
@@ -106,3 +101,8 @@ C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\UiCom
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\WinRTXamlToolkit.dll
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\WinRTXamlToolkit.pri.xml
 C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\T1807EHello.csprojAssemblyReference.cache
+C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\Logout.xbf
+C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\Logout.g.i.cs
+C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\Logout.g.cs
+C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\Logout.xaml
+C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\obj\x64\Debug\Pages\Logout.xbf

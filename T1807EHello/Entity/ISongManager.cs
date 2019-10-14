@@ -14,6 +14,6 @@ namespace T1807EHello.Entity
 
         ValidateData Validation(Song song);
         string GetDataFromServer(string songListUrl);
-        ObservableCollection<Song> LoadSongs();
+        ObservableCollection<Song> LoadSongs(int type);
     }
 }

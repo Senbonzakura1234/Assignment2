@@ -103,14 +103,14 @@
     <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\edit.xbf">
       <PackagePath>Pages\edit.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\FileHandle.xbf">
-      <PackagePath>Pages\FileHandle.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\Login.xbf">
       <PackagePath>Pages\Login.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\Logout.xbf">
+      <PackagePath>Pages\Logout.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aspire A315-51\source\repos\T1807EHello\T1807EHello\bin\x64\Debug\Pages\MasterLayout.xbf">
       <PackagePath>Pages\MasterLayout.xbf</PackagePath>

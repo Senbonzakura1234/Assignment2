@@ -51,7 +51,7 @@ namespace T1807EHello.Pages
 
         private void LoadListSongs()
         {
-            ListSongs = _songManager.LoadSongs();
+            ListSongs = _songManager.LoadSongs(0);
             MyListSong.ItemsSource = ListSongs;
             _currentIndex = 0;
         }

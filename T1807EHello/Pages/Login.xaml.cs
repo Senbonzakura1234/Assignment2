@@ -37,6 +37,9 @@ namespace T1807EHello.Pages
 
             //Email = "dungpath1805040@fpt.edu.vn";
             //Password = "12345";
+
+            ////Email = "anhdungpham090@gmail.com";
+            //Password = "123456";
         }
 
         private void ResetForm(object sender, RoutedEventArgs e)

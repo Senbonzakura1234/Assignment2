@@ -45,15 +45,16 @@
 
         </GridView>
         <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1">
-            <MediaElement AreTransportControlsEnabled="True"  Name="MyMediaPlayer" Height="60" Stretch="Fill">
+            <MediaElement AutoPlay="True"  MediaEnded="MyMediaPlayer_OnMediaEnded" AreTransportControlsEnabled="True"  Name="MyMediaPlayer" Height="60" Stretch="Fill">
                 <MediaElement.TransportControls>
-                    <MediaTransportControls  IsCompact="True"
+                    <MediaTransportControls  IsCompact="True" 
                         IsSeekBarVisible="True" 
                         IsVolumeButtonVisible="True" IsFullWindowButtonVisible="False" IsPlaybackRateButtonVisible="False"
                         IsZoomButtonVisible="False" />
                 </MediaElement.TransportControls>
+               
             </MediaElement>
-
+            
 
             <CommandBar IsOpen="True" Background="Transparent" >
                 <AppBarButton x:Name="Backward" Icon="Back" Label="Backward"   Click="Backward_OnClick"/>

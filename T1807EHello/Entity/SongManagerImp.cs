@@ -14,6 +14,7 @@ namespace T1807EHello.Entity
     internal class SongManagerImp : ISongManager
     {
         private const string SongApi = "https://2-dot-backup-server-003.appspot.com/_api/v2/songs";
+        private const string MySongApi = "https://2-dot-backup-server-003.appspot.com/_api/v2/songs/get-mine";
 
         public Song Upload(Song member)
         {
@@ -53,11 +54,12 @@ namespace T1807EHello.Entity
             return responseContent;
         }
 
-        public ObservableCollection<Song> LoadSongs()
+        public ObservableCollection<Song> LoadSongs(int type)
         {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + ReadTokenFile());
-            var responseContent = client.GetAsync(SongApi).Result.Content.ReadAsStringAsync().Result;
+            var apiSong = type == 1 ? MySongApi : SongApi;
+            var responseContent = client.GetAsync(apiSong).Result.Content.ReadAsStringAsync().Result;
             var songs = JsonConvert.DeserializeObject<ObservableCollection<Song>>(responseContent);
             
             return songs;

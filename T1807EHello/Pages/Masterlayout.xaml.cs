@@ -44,7 +44,8 @@ namespace T1807EHello.Pages
             ("upload", typeof(upload)),
             ("mySong", typeof(mySong)),
             ("profile", typeof(Profile)),
-            ("edit", typeof(edit))
+            ("edit", typeof(edit)),
+            ("logout", typeof(Logout))
         };
 
         public static void Refresh()
@@ -202,7 +203,7 @@ namespace T1807EHello.Pages
                 else if(navItemTag == "logout")
                 {
                     _service.Logout();
-                    page = typeof(Home);
+                    page = typeof(Logout);
                 }
                 else
                 {

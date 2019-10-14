@@ -42,7 +42,7 @@
                 <NavigationViewItem x:ConnectionId='10' Name="Register" Tag="register" Icon="Add" Content="Register"/>
                 <NavigationViewItem x:ConnectionId='11' Name="Logout" Tag="logout"  Content="Logout">
                     <NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE760;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE966;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
             </NavigationView.MenuItems>

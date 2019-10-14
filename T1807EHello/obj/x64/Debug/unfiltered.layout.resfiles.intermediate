@@ -11,9 +11,9 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 Pages\edit.xbf
-Pages\FileHandle.xbf
 Pages\Home.xbf
 Pages\Login.xbf
+Pages\Logout.xbf
 Pages\MasterLayout.xbf
 Pages\mySong.xbf
 Pages\NewSong.xbf
